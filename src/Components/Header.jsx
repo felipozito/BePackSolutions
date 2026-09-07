@@ -2,19 +2,17 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-  "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80&w=2070",
-  "https://images.unsplash.com/photo-1682687221175-9f678e5a8c1f?auto=format&fit=crop&q=80&w=2070",
-  "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&q=80&w=2070",
+  "https://unsplash.com/photos/3d-illustration-open-pizza-box-mockup-empty-package-and-delivery-package-on-isolated-background-nbUQ5bOxARQ",
+  "https://images.unsplash.com/photo-1682687220199-d0124f48f95b",
+  "https://images.unsplash.com/photo-1682687220923-c58b9a4592ae",
 ];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, []);
 
