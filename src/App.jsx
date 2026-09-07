@@ -1,13 +1,13 @@
+import Home from "./Pages/Home";
 
 function App() {
-
   return (
-    <>
-      <div className=''>
-        TEMA
-       </div>
-    </>
-  )
+    <div>
+      <div className="bg-slate-50">
+        <Home />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
